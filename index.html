@@ -2078,9 +2078,6 @@
   function partyCheckGazeOk(player, question){
     const dir = partyPlayerGazeDirection(player);
     if(dir !== question?.correctDirection) return false;
-    if(question?.aoeGazeBoard){
-      return true;
-    }
     const pt = { x: player.x, y: player.y };
     const pos = partyGazeCorrectPosition(question);
     return partyGazePositionOk(pt, pos);
